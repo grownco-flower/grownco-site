@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grow&co. · 일상의 꽃</title>
+  <style>
+    :root{
+      --bg:#0b0f0d;
+      --panel:#111814;
+      --line:#223127;
+      --text:#e7f2ec;
+      --muted:#9fb0a6;
+      --accent:#7ee0a8;
+      --warn:#ffd27d;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(126,224,168,.12), transparent 60%),
+        radial-gradient(900px 600px at 100% 10%, rgba(255,210,125,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:26px 18px 56px}
+    .top{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);
+      background: rgba(17,24,20,.65); backdrop-filter: blur(8px);
+    }
+    .logo{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+    .logo .brand{font-weight:850;letter-spacing:.2px;font-size:18px}
+    .logo .tag{color:var(--accent);font-weight:750}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .pill{
+      text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:999px;
+      border:1px solid rgba(126,224,168,.35);
+      background: rgba(22,48,33,.50);
+      color:#dff6ea;
+    }
+    .pill:hover{border-color: rgba(126,224,168,.65)}
+    .ghost{
+      border-color: rgba(34,49,39,.9);
+      background: rgba(11,15,13,.25);
+      color: var(--text);
+    }
+    .hero{
+      margin-top:16px;
+      border:1px solid var(--line);
+      border-radius: calc(var(--radius) + 6px);
+      background: rgba(17,24,20,.55);
+      backdrop-filter: blur(8px);
+      overflow:hidden;
+    }
+    .hero-inner{padding:22px 18px 20px}
+    .kicker{color:var(--muted);font-size:13px}
+    h1{margin:10px 0 8px;font-size:28px;letter-spacing:.2px}
+    .lead{color:#dfeee6;max-width:70ch;margin:0}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{
+      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid rgba(126,224,168,.45);
+      background: rgba(22,48,33,.62);
+      color:#dff6ea;
+      font-weight:750;
+    }
+    .btn:hover{border-color: rgba(126,224,168,.75)}
+    .btn.secondary{
+      border-color: rgba(34,49,39,.9);
+      background: rgba(11,15,13,.25);
+      color: var(--text);
+      font-weight:700;
+    }
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:14px}
+    @media (max-width:920px){.grid{grid-template-columns:1fr} h1{font-size:26px}}
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(17,24,20,.55);
+      backdrop-filter: blur(8px);
+      padding:16px;
+    }
+    .card h2{margin:0 0 10px;font-size:15px;color:#d9efe2}
+    .muted{color:var(--muted);font-size:13px}
+    .list{margin:10px 0 0;padding-left:18px;color:#dfeee6}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{
+      font-size:12px;padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(34,49,39,.9);
+      background: rgba(22,48,33,.45);
+      color:#cfe8d8;
+    }
+    .divider{height:1px;background:var(--line);margin:14px 0}
+    .small{font-size:12px;color:var(--muted)}
+    .foot{
+      margin-top:14px;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(17,24,20,.45);
+      color: var(--muted);
+      font-size:12.5px;
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    }
+    code{background:rgba(11,15,13,.35);padding:2px 6px;border-radius:8px;border:1px solid rgba(34,49,39,.7)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div class="logo">
+        <div class="brand">Grow&co.</div>
+        <div class="tag">일상의 꽃</div>
+      </div>
+      <div class="nav">
+        <a class="pill ghost" href="#atlas">Flower Atlas</a>
+        <a class="pill ghost" href="#services">서비스</a>
+        <a class="pill ghost" href="#contact">문의</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="kicker">Grow&co. Official Mini Homepage</div>
+        <h1>일상에 꽃을 더 쉽게, 더 가깝게.</h1>
+        <p class="lead">
+          Grow&co.는 꽃을 ‘감성’으로만 판매하지 않습니다. 초보도 이해할 수 있게 정리한 <b style="color:var(--accent)">Flower Atlas(꽃도감)</b>과,
+          목적에 맞는 상품/클래스로 ‘일상의 꽃’을 연결합니다.
+        </p>
+
+        <div class="cta-row">
+          <!-- ✅ 꽃도감 파일과 같은 폴더에 두면 자동으로 연결됩니다 -->
+          <a class="btn" href="grownco_flower_atlas_3flowers_detail.html" id="atlasLink">🌿 Flower Atlas 열기</a>
+
+          <!-- ✅ 스마트스토어 주소를 넣고 싶으면 아래 href만 교체하세요 -->
+          <a class="btn secondary" href="#" id="storeLink">🛒 스마트스토어(추가 예정)</a>
+
+          <!-- ✅ 전화 -->
+          <a class="btn secondary" href="tel:010-5125-1297">📞 전화하기</a>
+        </div>
+
+        <div class="chips">
+          <span class="chip">정기구독</span>
+          <span class="chip">졸업·기념일</span>
+          <span class="chip">기업·기관 납품</span>
+          <span class="chip">클래스(자스며)</span>
+        </div>
+        <div class="small" style="margin-top:10px">
+          ※ 이 페이지는 “한 장짜리 오픈용”입니다. 다음 단계에서 메뉴형/여러 페이지 구조로 확장 가능합니다.
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+
+      <section class="card" id="atlas">
+        <h2>🌿 Flower Atlas (꽃도감)</h2>
+        <div class="muted">
+          카드 클릭 → 상세(꽃말/관리/택배주의/추천조합)까지 한 번에 보는 Grow&co. 표준 도감.
+        </div>
+        <div class="divider"></div>
+        <ul class="list">
+          <li>장미 / 거베라 / 스프레이 소국 (현재 3종 탑재)</li>
+          <li>사진 기반: 사장님이 촬영한 실물 사진으로 신뢰도 업</li>
+          <li>다음 확장: 스프레이장미, 카네이션, 스토크, 왁스플라워, 유칼립투스 등</li>
+        </ul>
+        <div class="cta-row" style="margin-top:14px">
+          <a class="btn" href="grownco_flower_atlas_3flowers_detail.html">도감 바로 보기</a>
+          <a class="btn secondary" href="#contact">도감 제작/납품 문의</a>
+        </div>
+        <div class="small" style="margin-top:10px">
+          ✅ 중요한 규칙: <b>이 홈페이지 파일과 도감 파일</b>을 <b>같은 폴더</b>에 올리면 링크가 자동으로 작동합니다.
+        </div>
+      </section>
+
+      <aside class="card" id="services">
+        <h2>✨ 서비스</h2>
+        <ul class="list">
+          <li><b>정기구독</b> — 계절에 맞춘 ‘일상의 꽃’ 루틴</li>
+          <li><b>졸업·기념일</b> — 예산/분위기 기준 추천</li>
+          <li><b>B2B 납품</b> — 복지관·사무실·기관 행사</li>
+          <li><b>클래스(자스며)</b> — 자연이 스며드는 취미 커뮤니티</li>
+        </ul>
+        <div class="divider"></div>
+        <div class="muted">
+          필요하면 “가격대/납기/배송지역/사진”을 기준으로 상담 템플릿도 붙여드릴 수 있어요.
+        </div>
+      </aside>
+
+    </div>
+
+    <section class="card" id="contact" style="margin-top:14px">
+      <h2>💬 문의</h2>
+      <div class="muted">아래 3가지 채널을 모두 넣었습니다. (사장님 원하신 1·2·3)</div>
+      <div class="cta-row" style="margin-top:14px">
+        <!-- ✅ 카카오 오픈채팅 링크로 교체하세요 -->
+        <a class="btn" href="#" id="kakaoLink">💛 카카오 오픈채팅(링크 넣기)</a>
+
+        <!-- ✅ 인스타그램 -->
+        <a class="btn secondary" href="https://instagram.com/grownco_flower_plant" target="_blank" rel="noopener">📷 인스타 DM</a>
+
+        <!-- ✅ 전화 -->
+        <a class="btn secondary" href="tel:010-5125-1297">📞 전화</a>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="small">
+        링크 수정 위치 안내<br/>
+        • 스마트스토어 버튼: 상단의 <code>id="storeLink"</code> 부분의 <code>href</code> 교체<br/>
+        • 카카오 오픈채팅 버튼: <code>id="kakaoLink"</code> 부분의 <code>href</code> 교체<br/>
+        • (꽃도감) 버튼: <code>grownco_flower_atlas_3flowers_detail.html</code> 파일명 유지 + 같은 폴더 업로드
+      </div>
+    </section>
+
+    <div class="foot">
+      <div>© Grow&co. · 일상의 꽃</div>
+      <div>Mini Homepage · v1</div>
+    </div>
+
+  </div>
+
+  <script>
+    const guard = (id, msg) => {
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.addEventListener("click", (e)=>{
+        if(el.getAttribute("href") === "#"){
+          e.preventDefault();
+          alert(msg);
+        }
+      });
+    };
+    guard("storeLink", "스마트스토어 링크를 아직 넣지 않았어요. HTML 파일에서 storeLink의 href를 스마트스토어 주소로 바꿔주세요.");
+    guard("kakaoLink", "카카오 오픈채팅 링크를 아직 넣지 않았어요. HTML 파일에서 kakaoLink의 href를 오픈채팅 주소로 바꿔주세요.");
+  </script>
+</body>
+</html>
